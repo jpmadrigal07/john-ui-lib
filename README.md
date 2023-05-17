@@ -38,7 +38,7 @@ Then, run an dependencies installation again.
 
 Then, you can implement it like this:
 
-```bash
+```javascript
 import { Button } from "john-ui-lib";
 
 const Component = () => {
