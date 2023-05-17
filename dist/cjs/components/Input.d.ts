@@ -1,5 +1,5 @@
 import '../globals.css';
-import React from "react";
+import * as React from "react";
 interface InputOptions {
     className?: string;
     dim?: InputSize;

@@ -1,8 +1,8 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 import '../globals.css';
-import clsx from "clsx";
-import { forwardRef } from "react";
+import * as React from "react";
+import { twMerge } from 'tailwind-merge';
 var getVariant = function (variant) {
     switch (variant) {
         case "primary":
@@ -41,9 +41,9 @@ var getSize = function (size) {
             return undefined;
     }
 };
-var Button = forwardRef(function (props, ref) {
+var Button = React.forwardRef(function (props, ref) {
     var _a = props.variant, variant = _a === void 0 ? "primary" : _a, _b = props.dim, dim = _b === void 0 ? "md" : _b, className = props.className, children = props.children, rest = __rest(props, ["variant", "dim", "className", "children"]);
-    var merged = clsx("rounded shadow", getVariant(variant), getSize(dim), className);
+    var merged = twMerge("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
     return (_jsx("button", __assign({ ref: ref, className: merged }, rest, { children: children })));
 });
 Button.displayName = "Button";

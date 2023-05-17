@@ -1,7 +1,7 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Input from './';
+import Input from './Input';
 describe('Input', function () {
     test("Renders correctly", function () {
         render(_jsx(Input, { type: "text", "data-testid": "render" }));

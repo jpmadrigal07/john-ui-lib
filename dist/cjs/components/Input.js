@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
 var jsx_runtime_1 = require("react/jsx-runtime");
 require("../globals.css");
-var clsx_1 = tslib_1.__importDefault(require("clsx"));
-var react_1 = require("react");
+var React = tslib_1.__importStar(require("react"));
+var tailwind_merge_1 = require("tailwind-merge");
 var getSize = function (size) {
     switch (size) {
         case "xl":
@@ -21,10 +21,10 @@ var getSize = function (size) {
             return undefined;
     }
 };
-var defaultStyle = "relative inline-flex w-full rounded leading-none transition-colors ease-in-out placeholder-gray-500 text-gray-700 bg-gray-50 border border-gray-300 hover:border-blue-400 focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-4 focus:ring-opacity-30";
-var Input = (0, react_1.forwardRef)(function (props, ref) {
+var defaultStyle = "relative inline-flex w-full rounded leading-none transition-colors ease-in-out placeholder-gray-500 text-gray-700 bg-gray-50 border border-gray-300 hover:border-blue-400 focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-4 focus:ring-opacity-30 disabled:opacity-90 disabled:cursor-not-allowed";
+var Input = React.forwardRef(function (props, ref) {
     var _a = props.dim, dim = _a === void 0 ? "md" : _a, className = props.className, rest = tslib_1.__rest(props, ["dim", "className"]);
-    var merged = (0, clsx_1.default)(defaultStyle, getSize(dim), className);
+    var merged = (0, tailwind_merge_1.twMerge)(defaultStyle, getSize(dim), className);
     return ((0, jsx_runtime_1.jsx)("input", tslib_1.__assign({ ref: ref, className: merged }, rest)));
 });
 Input.displayName = "Input";
