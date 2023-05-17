@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Input = exports.Button = void 0;
-var tslib_1 = require("tslib");
-var Button_1 = tslib_1.__importDefault(require("./components/Button"));
-exports.Button = Button_1.default;
-var Input_1 = tslib_1.__importDefault(require("./components/Input"));
-exports.Input = Input_1.default;
+var Button_1 = require("./components/Button");
+Object.defineProperty(exports, "Button", { enumerable: true, get: function () { return Button_1.Button; } });
+var Input_1 = require("./components/Input");
+Object.defineProperty(exports, "Input", { enumerable: true, get: function () { return Input_1.Input; } });
 //# sourceMappingURL=index.js.map

@@ -41,11 +41,10 @@ var getSize = function (size) {
             return undefined;
     }
 };
-var Button = React.forwardRef(function (props, ref) {
+export var Button = React.forwardRef(function (props, ref) {
     var _a = props.variant, variant = _a === void 0 ? "primary" : _a, _b = props.dim, dim = _b === void 0 ? "md" : _b, className = props.className, children = props.children, rest = __rest(props, ["variant", "dim", "className", "children"]);
     var merged = twMerge("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
     return (_jsx("button", __assign({ ref: ref, className: merged }, rest, { children: children })));
 });
 Button.displayName = "Button";
-export default Button;
 //# sourceMappingURL=Button.js.map

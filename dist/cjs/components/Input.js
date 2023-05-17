@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Input = void 0;
 var tslib_1 = require("tslib");
 var jsx_runtime_1 = require("react/jsx-runtime");
 require("../globals.css");
@@ -22,11 +23,10 @@ var getSize = function (size) {
     }
 };
 var defaultStyle = "relative inline-flex w-full rounded leading-none transition-colors ease-in-out placeholder-gray-500 text-gray-700 bg-gray-50 border border-gray-300 hover:border-blue-400 focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-4 focus:ring-opacity-30 disabled:opacity-90 disabled:cursor-not-allowed";
-var Input = React.forwardRef(function (props, ref) {
+exports.Input = React.forwardRef(function (props, ref) {
     var _a = props.dim, dim = _a === void 0 ? "md" : _a, className = props.className, rest = tslib_1.__rest(props, ["dim", "className"]);
     var merged = (0, tailwind_merge_1.twMerge)(defaultStyle, getSize(dim), className);
     return ((0, jsx_runtime_1.jsx)("input", tslib_1.__assign({ ref: ref, className: merged }, rest)));
 });
-Input.displayName = "Input";
-exports.default = Input;
+exports.Input.displayName = "Input";
 //# sourceMappingURL=Input.js.map

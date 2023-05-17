@@ -37,7 +37,7 @@ const getSize = (size: InputSize) => {
 const defaultStyle =
   "relative inline-flex w-full rounded leading-none transition-colors ease-in-out placeholder-gray-500 text-gray-700 bg-gray-50 border border-gray-300 hover:border-blue-400 focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-4 focus:ring-opacity-30 disabled:opacity-90 disabled:cursor-not-allowed";
 
-const Input = React.forwardRef<Ref, InputProps>((props, ref) => {
+export const Input = React.forwardRef<Ref, InputProps>((props, ref) => {
     const {
         dim = "md",
         className,
@@ -52,4 +52,3 @@ const Input = React.forwardRef<Ref, InputProps>((props, ref) => {
 });
 
 Input.displayName = "Input";
-export default Input;

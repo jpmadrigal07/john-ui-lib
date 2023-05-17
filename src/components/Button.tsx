@@ -59,7 +59,7 @@ const getSize = (size: ButtonSize) => {
     }
 };
 
-const Button = React.forwardRef<Ref, ButtonProps>((props, ref) => {
+export const Button = React.forwardRef<Ref, ButtonProps>((props, ref) => {
     const {
         variant = "primary",
         dim = "md",
@@ -78,4 +78,3 @@ const Button = React.forwardRef<Ref, ButtonProps>((props, ref) => {
 });
 
 Button.displayName = "Button";
-export default Button;

@@ -2,7 +2,7 @@ import { __assign } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Button from './Button';
+import { Button } from './Button';
 describe('Button', function () {
     var onClickButton = jest.fn();
     test("Renders correctly", function () {

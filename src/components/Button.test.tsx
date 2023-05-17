@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-import Button from './Button';
+import { Button } from './Button';
 
 describe('Button', () => {
   const onClickButton = jest.fn();
