@@ -30,7 +30,7 @@ yarn test
 pnpm test
 ```
 
-If you want to use this to your own project, add this line in you package.json dependencies, 
+If you want to use this to your own project, add this line in your package.json dependencies, 
 
 *`"john-ui-lib": "git+https://github.com/jpmadrigal07/john-ui-lib#main"`*
 
