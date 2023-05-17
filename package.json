@@ -3,13 +3,11 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist"
+      "main": "./dist/cjs",
+      "module": "./dist"
     }
   },
   "scripts": {
@@ -46,9 +44,7 @@
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.1.0",
-    "typescript": "^5.0.4"
-  },
-  "dependencies": {
+    "typescript": "^5.0.4",
     "tailwind-merge": "^1.12.0"
   }
 }

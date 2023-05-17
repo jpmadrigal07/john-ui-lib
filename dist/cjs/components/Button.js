@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Button = void 0;
 var tslib_1 = require("tslib");
 var jsx_runtime_1 = require("react/jsx-runtime");
 require("../globals.css");
@@ -44,10 +43,11 @@ var getSize = function (size) {
             return undefined;
     }
 };
-exports.Button = React.forwardRef(function (props, ref) {
+var Button = React.forwardRef(function (props, ref) {
     var _a = props.variant, variant = _a === void 0 ? "primary" : _a, _b = props.dim, dim = _b === void 0 ? "md" : _b, className = props.className, children = props.children, rest = tslib_1.__rest(props, ["variant", "dim", "className", "children"]);
     var merged = (0, tailwind_merge_1.twMerge)("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
     return ((0, jsx_runtime_1.jsx)("button", tslib_1.__assign({ ref: ref, className: merged }, rest, { children: children })));
 });
-exports.Button.displayName = "Button";
+Button.displayName = "Button";
+exports.default = Button;
 //# sourceMappingURL=Button.js.map

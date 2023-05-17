@@ -6,5 +6,5 @@ interface InputOptions {
 }
 export type InputProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & InputOptions;
 type InputSize = "xl" | "lg" | "md" | "sm" | "xs";
-export declare const Input: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<HTMLInputElement>>;
-export {};
+declare const Input: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<HTMLInputElement>>;
+export default Input;
