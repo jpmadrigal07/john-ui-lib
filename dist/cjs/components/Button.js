@@ -4,7 +4,7 @@ var tslib_1 = require("tslib");
 var jsx_runtime_1 = require("react/jsx-runtime");
 require("../globals.css");
 var React = tslib_1.__importStar(require("react"));
-var tailwind_merge_1 = require("tailwind-merge");
+var clsx_1 = tslib_1.__importDefault(require("clsx"));
 var getVariant = function (variant) {
     switch (variant) {
         case "primary":
@@ -45,7 +45,7 @@ var getSize = function (size) {
 };
 var Button = React.forwardRef(function (props, ref) {
     var _a = props.variant, variant = _a === void 0 ? "primary" : _a, _b = props.dim, dim = _b === void 0 ? "md" : _b, className = props.className, children = props.children, rest = tslib_1.__rest(props, ["variant", "dim", "className", "children"]);
-    var merged = (0, tailwind_merge_1.twMerge)("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
+    var merged = (0, clsx_1.default)("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
     return ((0, jsx_runtime_1.jsx)("button", tslib_1.__assign({ ref: ref, className: merged }, rest, { children: children })));
 });
 Button.displayName = "Button";

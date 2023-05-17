@@ -1,6 +1,6 @@
 import '../globals.css';
 import * as React from "react";
-import { twMerge } from 'tailwind-merge'
+import clsx from 'clsx';
 
 interface ButtonOptions {
     className?: string;
@@ -68,7 +68,7 @@ const Button = React.forwardRef<Ref, ButtonProps>((props, ref) => {
         ...rest
     } = props;
 
-    const merged = twMerge("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
+    const merged = clsx("rounded shadow disabled:opacity-90 disabled:cursor-not-allowed", getVariant(variant), getSize(dim), className);
 
     return (
         <button ref={ref} className={merged} {...rest}>

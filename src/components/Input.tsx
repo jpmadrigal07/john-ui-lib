@@ -1,6 +1,6 @@
 import '../globals.css';
 import * as React from "react";
-import { twMerge } from 'tailwind-merge'
+import clsx from 'clsx';
 
 interface InputOptions {
     className?: string;
@@ -44,7 +44,7 @@ const Input = React.forwardRef<Ref, InputProps>((props, ref) => {
         ...rest
     } = props;
 
-    const merged = twMerge(defaultStyle, getSize(dim), className);
+    const merged = clsx(defaultStyle, getSize(dim), className);
 
     return (
         <input ref={ref} className={merged} {...rest} />
